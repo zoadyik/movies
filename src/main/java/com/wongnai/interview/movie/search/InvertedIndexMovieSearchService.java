@@ -1,14 +1,16 @@
 package com.wongnai.interview.movie.search;
 
-import java.util.List;
-
+import com.wongnai.interview.movie.Movie;
+import com.wongnai.interview.movie.MovieRepository;
+import com.wongnai.interview.movie.MovieSearchService;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.text.WordUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.DependsOn;
 import org.springframework.stereotype.Component;
 
-import com.wongnai.interview.movie.Movie;
-import com.wongnai.interview.movie.MovieRepository;
-import com.wongnai.interview.movie.MovieSearchService;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @Component("invertedIndexMovieSearchService")
 @DependsOn("movieDatabaseInitializer")
@@ -34,7 +36,43 @@ public class InvertedIndexMovieSearchService implements MovieSearchService {
 		// from inverted index for Star and for War so that you get movie ids 1,5,8 for Star and 2,5 for War. The result that
 		// you have to return can be union or intersection of those 2 sets of ids.
 		// By the way, in this assignment, you must use intersection so that it left for just movie id 5.
+        String[] querys = WordUtils.capitalizeFully(queryText.toLowerCase()).split(" ");
+        Map<String, List<Long>> multimap = new HashMap<>();
+        Arrays.stream(querys).forEach(i -> {
+            Map<String, List<Movie>> titleName = movieRepository.findByNameContains(StringUtils.capitalize(i))
+                    .stream()
+                    .collect(Collectors.groupingBy(Movie::getName));
+            for (String key : titleName.keySet()) {
+                String[] partKey = key.split(" ");
+                Arrays.stream(partKey).forEach(m -> {
+                    if (!multimap.containsKey(m)) {
+                        multimap.put(m, titleName.get(key)
+                                .stream()
+                                .map(Movie::getId)
+                                .collect(Collectors.toList()));
+                    } else {
+                        multimap.get(m).add(titleName.get(key)
+                                .stream()
+                                .map(Movie::getId)
+                                .findFirst()
+                                .orElseThrow(IllegalArgumentException::new));
+                    }
+                });
+            }
+        });
 
-		return null;
+        List<Long> result = new ArrayList<>();
+
+        for (String query : querys) {
+            if (multimap.containsKey(query)) {
+                if (!result.isEmpty())
+                    result.retainAll(multimap.get(query));
+                else result.addAll(multimap.get(query));
+            }
+        }
+        return result.stream()
+                .distinct()
+                .map(m -> movieRepository.findById(m)
+                .orElseThrow(IllegalArgumentException::new)).collect(Collectors.toList());
 	}
 }
