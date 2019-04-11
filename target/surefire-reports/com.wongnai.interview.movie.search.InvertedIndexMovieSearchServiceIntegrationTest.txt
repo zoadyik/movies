@@ -1,0 +1,30 @@
+-------------------------------------------------------------------------------
+Test set: com.wongnai.interview.movie.search.InvertedIndexMovieSearchServiceIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 6, Skipped: 0, Time elapsed: 0.049 s <<< FAILURE! - in com.wongnai.interview.movie.search.InvertedIndexMovieSearchServiceIntegrationTest
+testFindSingleKeywordContainInTitleWithCaseInsensitive(com.wongnai.interview.movie.search.InvertedIndexMovieSearchServiceIntegrationTest)  Time elapsed: 0.007 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.wongnai.interview.movie.search.InvertedIndexMovieSearchServiceIntegrationTest.assertGloriousMovieKeyword(InvertedIndexMovieSearchServiceIntegrationTest.java:37)
+	at com.wongnai.interview.movie.search.InvertedIndexMovieSearchServiceIntegrationTest.testFindSingleKeywordContainInTitleWithCaseInsensitive(InvertedIndexMovieSearchServiceIntegrationTest.java:33)
+
+testPartialWordMustNotMatch(com.wongnai.interview.movie.search.InvertedIndexMovieSearchServiceIntegrationTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.wongnai.interview.movie.search.InvertedIndexMovieSearchServiceIntegrationTest.testPartialWordMustNotMatch(InvertedIndexMovieSearchServiceIntegrationTest.java:52)
+
+testMultiKeywordsMustFoundMoviesContainAllOfKeywords(com.wongnai.interview.movie.search.InvertedIndexMovieSearchServiceIntegrationTest)  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.wongnai.interview.movie.search.InvertedIndexMovieSearchServiceIntegrationTest.testMultiKeywordsMustFoundMoviesContainAllOfKeywords(InvertedIndexMovieSearchServiceIntegrationTest.java:67)
+
+testFindSingleKeywordContainInTitle(com.wongnai.interview.movie.search.InvertedIndexMovieSearchServiceIntegrationTest)  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.wongnai.interview.movie.search.InvertedIndexMovieSearchServiceIntegrationTest.assertGloriousMovieKeyword(InvertedIndexMovieSearchServiceIntegrationTest.java:37)
+	at com.wongnai.interview.movie.search.InvertedIndexMovieSearchServiceIntegrationTest.testFindSingleKeywordContainInTitle(InvertedIndexMovieSearchServiceIntegrationTest.java:26)
+
+testFullMovieNameMustMatchMovie(com.wongnai.interview.movie.search.InvertedIndexMovieSearchServiceIntegrationTest)  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.wongnai.interview.movie.search.InvertedIndexMovieSearchServiceIntegrationTest.testFullMovieNameMustMatchMovie(InvertedIndexMovieSearchServiceIntegrationTest.java:59)
+
+testMultiKeywordsCaseInsensitive(com.wongnai.interview.movie.search.InvertedIndexMovieSearchServiceIntegrationTest)  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.NullPointerException
+	at com.wongnai.interview.movie.search.InvertedIndexMovieSearchServiceIntegrationTest.testMultiKeywordsCaseInsensitive(InvertedIndexMovieSearchServiceIntegrationTest.java:76)
+

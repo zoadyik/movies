@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.wongnai.interview.movie.external.MovieDataServiceImplIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.691 s - in com.wongnai.interview.movie.external.MovieDataServiceImplIntegrationTest

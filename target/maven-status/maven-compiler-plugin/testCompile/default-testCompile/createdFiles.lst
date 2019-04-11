@@ -1,0 +1,6 @@
+com/wongnai/interview/movie/search/InvertedIndexMovieSearchServiceIntegrationTest.class
+com/wongnai/interview/movie/MovieTestHelper.class
+com/wongnai/interview/movie/external/MovieDataServiceImplIntegrationTest.class
+com/wongnai/interview/movie/search/DatabaseMovieSearchServiceIntegrationTest.class
+com/wongnai/interview/movie/search/SimpleMovieSearchServiceIntegrationTest.class
+com/wongnai/interview/movie/MoviesControllerIntegrationTest.class

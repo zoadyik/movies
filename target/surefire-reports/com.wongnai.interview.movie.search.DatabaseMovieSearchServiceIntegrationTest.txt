@@ -1,0 +1,35 @@
+-------------------------------------------------------------------------------
+Test set: com.wongnai.interview.movie.search.DatabaseMovieSearchServiceIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 4, Errors: 0, Skipped: 0, Time elapsed: 6.089 s <<< FAILURE! - in com.wongnai.interview.movie.search.DatabaseMovieSearchServiceIntegrationTest
+testFindSingleKeywordContainInTitleWithCaseInsensitive(com.wongnai.interview.movie.search.DatabaseMovieSearchServiceIntegrationTest)  Time elapsed: 0.17 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: <7>
+     but: was <14>
+	at com.wongnai.interview.movie.search.DatabaseMovieSearchServiceIntegrationTest.assertGloriousMovieKeyword(DatabaseMovieSearchServiceIntegrationTest.java:30)
+	at com.wongnai.interview.movie.search.DatabaseMovieSearchServiceIntegrationTest.testFindSingleKeywordContainInTitleWithCaseInsensitive(DatabaseMovieSearchServiceIntegrationTest.java:67)
+
+testPartialWordMustMatchMovies(com.wongnai.interview.movie.search.DatabaseMovieSearchServiceIntegrationTest)  Time elapsed: 0.128 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: <7>
+     but: was <14>
+	at com.wongnai.interview.movie.search.DatabaseMovieSearchServiceIntegrationTest.assertGloriousMovieKeyword(DatabaseMovieSearchServiceIntegrationTest.java:30)
+	at com.wongnai.interview.movie.search.DatabaseMovieSearchServiceIntegrationTest.testPartialWordMustMatchMovies(DatabaseMovieSearchServiceIntegrationTest.java:45)
+
+testFindSingleKeywordContainInTitle(com.wongnai.interview.movie.search.DatabaseMovieSearchServiceIntegrationTest)  Time elapsed: 0.127 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: <7>
+     but: was <14>
+	at com.wongnai.interview.movie.search.DatabaseMovieSearchServiceIntegrationTest.assertGloriousMovieKeyword(DatabaseMovieSearchServiceIntegrationTest.java:30)
+	at com.wongnai.interview.movie.search.DatabaseMovieSearchServiceIntegrationTest.testFindSingleKeywordContainInTitle(DatabaseMovieSearchServiceIntegrationTest.java:26)
+
+testFullMovieNameMustMatchMovie(com.wongnai.interview.movie.search.DatabaseMovieSearchServiceIntegrationTest)  Time elapsed: 0.15 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: <1>
+     but: was <2>
+	at com.wongnai.interview.movie.search.DatabaseMovieSearchServiceIntegrationTest.testFullMovieNameMustMatchMovie(DatabaseMovieSearchServiceIntegrationTest.java:52)
+

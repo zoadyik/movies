@@ -1,0 +1,15 @@
+com/wongnai/interview/movie/sync/MovieDataSynchronizer.class
+com/wongnai/interview/movie/search/DatabaseMovieSearchService.class
+com/wongnai/interview/movie/external/MovieDataService.class
+com/wongnai/interview/Application.class
+com/wongnai/interview/movie/sync/MovieDatabaseInitializer.class
+com/wongnai/interview/movie/search/SimpleMovieSearchService.class
+com/wongnai/interview/movie/external/MovieDataServiceImpl.class
+com/wongnai/interview/movie/external/MoviesResponse.class
+com/wongnai/interview/movie/external/MovieData.class
+com/wongnai/interview/movie/search/InvertedIndexMovieSearchService.class
+com/wongnai/interview/movie/MoviesController.class
+com/wongnai/interview/movie/MovieRepository.class
+com/wongnai/interview/movie/MovieSearchService.class
+com/wongnai/interview/config/MovieConfiguration.class
+com/wongnai/interview/movie/Movie.class

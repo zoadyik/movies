@@ -1,0 +1,19 @@
+-------------------------------------------------------------------------------
+Test set: com.wongnai.interview.movie.search.SimpleMovieSearchServiceIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 2.16 s <<< FAILURE! - in com.wongnai.interview.movie.search.SimpleMovieSearchServiceIntegrationTest
+testFindSingleKeywordContainInTitleWithCaseInsensitive(com.wongnai.interview.movie.search.SimpleMovieSearchServiceIntegrationTest)  Time elapsed: 0.513 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: <7>
+     but: was <0>
+	at com.wongnai.interview.movie.search.SimpleMovieSearchServiceIntegrationTest.assertGloriousMovieKeyword(SimpleMovieSearchServiceIntegrationTest.java:30)
+	at com.wongnai.interview.movie.search.SimpleMovieSearchServiceIntegrationTest.testFindSingleKeywordContainInTitleWithCaseInsensitive(SimpleMovieSearchServiceIntegrationTest.java:66)
+
+testFullMovieNameMustNotMatch(com.wongnai.interview.movie.search.SimpleMovieSearchServiceIntegrationTest)  Time elapsed: 0.442 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: <0>
+     but: was <1>
+	at com.wongnai.interview.movie.search.SimpleMovieSearchServiceIntegrationTest.testFullMovieNameMustNotMatch(SimpleMovieSearchServiceIntegrationTest.java:52)
+
